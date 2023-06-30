@@ -92,11 +92,11 @@ export const Prenium = ({ route, navigation }) => {
                       {/* Parenthèse (id) à changer par n° id_user de la bdd */}
                     <Text style={[Styles.textBlueCenter, {top:80}]}>ID.{formattedDate}.(id)</Text>
                     <Text style={[Styles.textWhite4, {top:100}]}>
-                        Grâce à l'abonnement, obtenez{"\n"}
+                        Grâce à l&apos;abonnement, obtenez{"\n"}
                         notre carte de visite avec votre {"\n"}
-                        numéro d'identification.{"\n"}
+                        numéro d&apos;identification.{"\n"}
                         Donnez cette carte à un.e{"\n"}
-                        inconnu.e dans le rue pour qu'il{"\n"}
+                        inconnu.e dans le rue pour qu&apos;il{"\n"}
                         vous retouve sur notre application.
                     </Text>
                     <Image style={[Styles.imgCard, {top:120}]} source={require('../../assets/images/carte-visite.png')} />
@@ -114,7 +114,7 @@ export const Prenium = ({ route, navigation }) => {
                         onPress={() => navigation.navigate('Prenium', {
                         userConsent: consentement, routeName: routeChoice, loveCoach: loveCoach, userEmail: userEmail, userPhone: userPhone, userCity: userCity, accesPosition: accesPosition, genre: genre, userBirth: userBirth, userSize: userSize, userLang: userLang, userSituation: userSituation, userOrientation: userOrientation, userRecherche1: userRecherche1, userRecherche2: userRecherche2, userAffinites: userAffinites, rythmeDeVie1: rythmeDeVie1, rythmeDeVie2: rythmeDeVie2, userPrenom: userPrenom})}
                         accessibilityLabel="Voir les conditions d'abonnement Prenium<">
-                        <Text style={[Styles.textBtn8, {top:120}]}>Voir les conditions d'abonnement Prenium</Text>
+                        <Text style={[Styles.textBtn8, {top:120}]}>Voir les conditions d&apos;abonnement Prenium</Text>
                     </TouchableOpacity>
                     <View style={[{top:110}]}>
                         <TouchableOpacity style={Styles.btn} onPress={() => navigation.navigate('Compte', {

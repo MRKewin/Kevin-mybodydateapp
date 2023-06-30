@@ -1,7 +1,43 @@
+// import * as React from 'react';
+// import { StatusBar } from 'react-native';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// import AboutMeScreen from './components/screens/AboutMeScreen';
+
+// const Stack = createNativeStackNavigator();
+
+// function App() {
+//   return (
+//     <NavigationContainer>
+//       <StatusBar translucent backgroundColor="transparent" />
+//       <Stack.Navigator
+//         initialRouteName="AboutMe"
+//       >
+//         <Stack.Screen
+//           name="AboutMe"
+//           component={AboutMeScreen}
+//           options={{
+//             headerShown: false,
+//           }}
+//         />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
+// export default App;
+
+
+
 import * as React from 'react';
+
 import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// import { AboutMeScreen } from './components/screens/AboutMeScreen';
+
 import { HomeStack } from './components/screens/HomeStack';
 import { Bienvenue } from './components/screens/Bienvenue';
 import { Creation } from './components/screens/CreationEtDeveloppement';
@@ -41,6 +77,8 @@ import { SignInPhone } from './components/screens/SinscrirePhone';
 import { RecuperationCode } from './components/screens/RecuperationCode';
 import { ConfirmationNumero } from './components/screens/ConfirmationNumero';
 import { Profil } from './components/screens/Profil';
+import { ProfilMe } from './components/screens/ProfilMe';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -50,7 +88,13 @@ function App() {
     
     <NavigationContainer>
       <StatusBar translucent backgroundColor="transparent" />
-      <Stack.Navigator initialRouteName="Home">
+      {/* <Stack.Navigator initialRouteName="Home"> */}
+      {/* ...autres écrans */}
+        {/* <Stack.Screen name="AboutMeScreen" component={AboutMeScreen} options={{ headerShown: false }} /> */}
+
+      {/* </Stack.Navigator> */}
+
+       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeStack} options={{ title: "", headerTransparent: true, headerStyle: { backgroundColor: 'transparent', } }} />
         <Stack.Screen name="Home Next" component={HomeStackNext} options={{ headerShown: false }} />
         <Stack.Screen name="Bienvenue" component={Bienvenue} options={{ headerShown: false }} />
@@ -84,15 +128,16 @@ function App() {
         <Stack.Screen name="Recuperation code" component={RecuperationCode} options={{ headerShown: true, title: 'Retour', headerTransparent: true, headerTintColor: '#FFF', headerTintStyle: { borderBottomColor: '#FFF', borderBottomWidth: 2 } }} />
         <Stack.Screen name="Confirmation compte" component={ConfirmationCompte} options={{ headerShown: true, title: 'Retour', headerTransparent: true, headerTintColor: '#FFF', headerTintStyle: { borderBottomColor: '#FFF', borderBottomWidth: 2 } }} />
         <Stack.Screen name="AjoutPhoto" component={AjoutPhoto} options={{ headerShown: true, title: 'Retour', headerTransparent: true, headerTintColor: '#FFF', headerTintStyle: { borderBottomColor: '#FFF', borderBottomWidth: 2 } }} />
-        {/* <Stack.Screen name="Ajouter photo" component={AjoutPhoto} options={{ headerShown: true, title: 'Retour', headerTransparent: true, headerTintColor: '#FFF', headerTintStyle: { borderBottomColor: '#FFF', borderBottomWidth: 2 } }} /> */}
+        <Stack.Screen name="Ajouter photo" component={AjoutPhoto} options={{ headerShown: true, title: 'Retour', headerTransparent: true, headerTintColor: '#FFF', headerTintStyle: { borderBottomColor: '#FFF', borderBottomWidth: 2 } }} />
         <Stack.Screen name="Empreinte vocal" component={EmpreinteVocal} options={{ headerShown: true, title: 'Retour', headerTransparent: true, headerTintColor: '#FFF', headerTintStyle: { borderBottomColor: '#FFF', borderBottomWidth: 2 } }} />
         <Stack.Screen name="Charte d'engagement" component={CharteEngagement} options={{ headerShown: true, title: 'Retour', headerTransparent: true, headerTintColor: '#FFF', headerTintStyle: { borderBottomColor: '#FFF', borderBottomWidth: 2 } }} />
         <Stack.Screen name="Felicitations" component={Felicitations} options={{ headerShown: false }} />
-
+        <Stack.Screen name="ProfilMe" component={ProfilMe} />
         <Stack.Screen name="Profil" component={Profil} options={{ headerShown: false }} />
         
         <Stack.Screen name="Test" component={ScreenTest} options={{ headerShown: false }} />
-      </Stack.Navigator>
+
+      </Stack.Navigator>  
     </NavigationContainer>
   );
 }
